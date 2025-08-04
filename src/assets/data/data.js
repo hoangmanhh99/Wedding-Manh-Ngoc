@@ -2,33 +2,33 @@ export const data = {
     bride: {
         L: {
             id: 1,
-            name: 'Lorem Ipsum',
+            name: 'Hoàng Văn Mạnh',
             child: 'Putra ke lorem',
             father: 'Lorem',
             mother: 'Ipsum',
-            image: './src/assets/images/cowo.png'
+            image: './src/assets/images/10.jpg'
         },
         P: {
             id: 2,
-            name: 'Ipsum Lorem',
+            name: 'Phạm Nguyễn Minh Ngọc',
             child: 'Putri ke lorem',
             father: 'Lorem',
             mother: 'Ipsum',
-            image: './src/assets/images/cewe.png'
+            image: './src/assets/images/4.jpg'
         },
 
-        couple: './src/assets/images/couple.png'
+        couple: './src/assets/images/7.jpg'
     },
 
     time: {
         marriage: {
-            year: '2030',
+            year: '2025',
             month: 'November',
-            date: '14',
-            day: 'Kamis',
+            date: '29',
+            day: 'Thứ 7',
             hours: {
-                start: '08.00',
-                finish: 'Selesai'
+                start: '17.00',
+                finish: 'Hoàn thành'
             }
         },
         reception: {
@@ -38,15 +38,15 @@ export const data = {
             day: 'Kamis',
             hours: {
                 start: '11.00',
-                finish: 'Selesai'
+                finish: 'Hoàn thành'
             }
         },
-        address: 'Kp. Lorem, RT 000/ RW 000, Desa.Lorem, Kec.Ipsum, Kab.Lorem, Lorem (1234)'
+        address: 'Trung Tâm Tiệc Cưới 133, 105 Lý Sơn, Ngọc Thụy, Long Biên, Hà Nội'
     },
 
     link: {
-        calendar: 'https://calendar.app.google/oSVLRMYC79GzuA4f9',
-        map: 'https://maps.app.goo.gl/q1Ask2Jgd4ekiiKBA',
+        calendar: 'https://calendar.app.google/C3H55oeF2W4pJGMB8',
+        map: 'https://maps.app.goo.gl/XapfMUeNVvm2aYCm7',
     },
 
     galeri: [
@@ -75,13 +75,13 @@ export const data = {
     bank: [
         {
             id: 1,
-            name: 'Lorem Ipsum',
+            name: 'HOANG VAN MANH',
             icon: './src/assets/images/bca.png',
             rekening: '12345678'
         },
         {
             id: 2,
-            name: 'Ipsum Lorem',
+            name: 'PHAM NGUYEN MINH NGOC',
             icon: './src/assets/images/bri.png',
             rekening: '12345678'
         },
@@ -89,7 +89,7 @@ export const data = {
 
     audio: './src/assets/audio/wedding.mp3',
 
-    api: 'https://script.google.com/macros/s/AKfycbyydz6N4p2VWUG8zsXeURv6ap9RP8a4eC3x6N3x6qTDjMVr1cIBz9S0NsHw2rWvBOSXGg/exec',
+    api: 'https://script.google.com/macros/s/AKfycbxkvUep5UAAoNbQtP7tsv8W4Sb6lNBGC38U8CYMDi2FRAJfwY6jXlNKCgKN_RGKgXpVDQ/exec',
 
     navbar: [
         {
