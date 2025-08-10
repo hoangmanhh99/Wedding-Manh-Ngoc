@@ -2,6 +2,7 @@ import {data} from "../assets/data/data.js";
 import {addClassElement, getQueryParameter, removeClassElement} from "../utils/helper.js";
 
 export const welcome = () => {
+    let hasScrolled = false;
     const welcomeElement = document.querySelector('.welcome');
     const homeElement = document.querySelector('.home');
     const navbarElement = document.querySelector('header nav');
@@ -53,9 +54,31 @@ export const welcome = () => {
         });
     };
 
-    openWeddingButton.addEventListener('click', () => {
+    // openWeddingButton.addEventListener('click', () => {
+    //     addClassElement(document.body, 'active');
+    //     addClassElement(welcomeElement, 'hide');
+
+    //     setTimeout(() => {
+    //         addClassElement(homeElement, 'active');
+    //         addClassElement(navbarElement, 'active');
+    //         addClassElement(audioButton, 'show');
+    //         removeClassElement(iconButton, 'bx-play-circle');
+    //         addClassElement(iconButton, 'bx-pause-circle');
+    //         audioMusic.play();
+    //     }, 1500);
+
+    //     setTimeout(() => {
+    //         addClassElement(audioButton, 'active');
+    //     }, 3000);
+    // });
+    window.addEventListener('wheel', (event) => {
+        console.log("=== deltaY : ", window.deltaY );
+        
+    if (!hasScrolled && event.deltaY  > 0) { // Điều kiện scroll
+        hasScrolled = true;  // hoặc giá trị phù hợp với giao diện của bạn
         addClassElement(document.body, 'active');
         addClassElement(welcomeElement, 'hide');
+        
 
         setTimeout(() => {
             addClassElement(homeElement, 'active');
@@ -63,13 +86,16 @@ export const welcome = () => {
             addClassElement(audioButton, 'show');
             removeClassElement(iconButton, 'bx-play-circle');
             addClassElement(iconButton, 'bx-pause-circle');
-            audioMusic.play();
+            
+
         }, 1500);
+        audioMusic.play();
 
         setTimeout(() => {
             addClassElement(audioButton, 'active');
         }, 3000);
-    });
+    }
+});
 
     const initializeWelcome = () => {
         figureElement.innerHTML = generateFigureContent(data.bride);
