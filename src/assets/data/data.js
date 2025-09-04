@@ -77,13 +77,15 @@ export const data = {
             id: 1,
             name: 'HOANG VAN MANH',
             icon: './src/assets/images/bca.png',
-            rekening: '12345678'
+            rekening: '12345678',
+            qrCode: './src/assets/images/qr-groom.png'
         },
         {
             id: 2,
             name: 'PHAM NGUYEN MINH NGOC',
             icon: './src/assets/images/bri.png',
-            rekening: '12345678'
+            rekening: '12345678',
+            qrCode: './src/assets/images/qr-bride.png'
         },
     ],
 

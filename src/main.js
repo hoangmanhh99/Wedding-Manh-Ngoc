@@ -5,6 +5,7 @@ import {galery} from "./js/galery.js";
 import {wishes} from "./js/wishes.js";
 import {navbar} from "./js/navbar.js";
 import {welcome} from "./js/welcome.js";
+import {gift} from "./js/gift.js";
 
 // load content
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,4 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
     time();
     galery();
     wishes();
+    gift();
 });
