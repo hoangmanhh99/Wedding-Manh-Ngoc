@@ -1,17 +1,17 @@
 import {data} from "../assets/data/data.js";
 
-export const galeri = () => {
-    const galeriElement = document.querySelector('.galeri');
-    const showAllContainer = galeriElement.querySelector('div:nth-of-type(2)');
+export const galery = () => {
+    const galeryElement = document.querySelector('.galery');
+    const showAllContainer = galeryElement.querySelector('div:nth-of-type(2)');
 
-    const [_, figureElement, paginationElement, prevButton, nextButton, showAllButton] = galeriElement.children[0].children;
+    const [_, figureElement, paginationElement, prevButton, nextButton, showAllButton] = galeryElement.children[0].children;
     const [__, showAllBox, closeButton] = showAllContainer.children;
 
     const initializeGallery = () => {
-        const initialImage = data.galeri[0];
-        figureElement.innerHTML = `<img src="${initialImage.image}" alt="galeri image" id="${initialImage.id}">`;
+        const initialImage = data.galery[0];
+        figureElement.innerHTML = `<img src="${initialImage.image}" alt="galery image" id="${initialImage.id}">`;
 
-        data.galeri.forEach((item, index) => {
+        data.galery.forEach((item, index) => {
             paginationElement.innerHTML += `<li data-id="${item.id}" ${index === 0 ? 'class="active"' : ''}></li>`;
         });
 
@@ -19,10 +19,10 @@ export const galeri = () => {
     };
 
     const updateGalleryImage = (id) => {
-        const selectedImage = data.galeri.find(item => item.id === id);
+        const selectedImage = data.galery.find(item => item.id === id);
 
         if (selectedImage) {
-            figureElement.innerHTML = `<img src="${selectedImage.image}" alt="galeri image" id="${selectedImage.id}">`;
+            figureElement.innerHTML = `<img src="${selectedImage.image}" alt="galery image" id="${selectedImage.id}">`;
 
             paginationElement.querySelectorAll('li').forEach((li) => {
                 li.classList.toggle('active', parseInt(li.dataset.id) === id);
@@ -37,14 +37,14 @@ export const galeri = () => {
 
     const autoPlayGallery = () => {
         let id = parseInt(nextButton.dataset.id);
-        id = (id < data.galeri.length) ? id + 1 : 1;
+        id = (id < data.galery.length) ? id + 1 : 1;
         updateNavigationButtons(id);
         updateGalleryImage(id);
     };
 
     nextButton.addEventListener('click', () => {
         let id = parseInt(nextButton.dataset.id);
-        if (id < data.galeri.length) {
+        if (id < data.galery.length) {
             id++;
             updateNavigationButtons(id);
             updateGalleryImage(id);
@@ -61,7 +61,7 @@ export const galeri = () => {
     });
 
     showAllButton.addEventListener('click', () => {
-        showAllBox.innerHTML = data.galeri.map(item => `<img src="${item.image}" alt="image galeri">`).join('');
+        showAllBox.innerHTML = data.galery.map(item => `<img src="${item.image}" alt="image galery">`).join('');
         showAllContainer.classList.add('active');
     });
 

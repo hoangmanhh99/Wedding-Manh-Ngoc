@@ -66,22 +66,22 @@ export const getCurrentDateTime = () => {
 };
 
 const monthMapping = {
-    'Januari': 1,
-    'Februari': 2,
-    'Maret': 3,
+    'January': 1,
+    'February': 2,
+    'March': 3,
     'April': 4,
-    'Mei': 5,
-    'Juni': 6,
-    'Juli': 7,
-    'Agustus': 8,
+    'May': 5,
+    'June': 6,
+    'July': 7,
+    'August': 8,
     'September': 9,
-    'Oktober': 10,
+    'October': 10,
     'November': 11,
-    'Desember': 12
+    'December': 12
 };
 
 export const monthNameToNumber = (monthName) => {
-    return monthMapping[monthName] || 'di awali huruf besar!';
+    return monthMapping[monthName] || 'bắt đầu bằng chữ cái viết hoa!';
 }
 
 export const getQueryParameter = (parameterName) => {

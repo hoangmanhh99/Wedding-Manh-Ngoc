@@ -1,4 +1,4 @@
-.galeri {
+.galery {
     width: 100%;
     min-height: 100vh;
     text-align: center;
@@ -7,7 +7,7 @@
     position: relative;
 }
 
-.galeri .container {
+.galery .container {
     width: 100%;
     padding: 0 1.5rem 2rem;
     border-radius: 50px;
@@ -15,14 +15,14 @@
     position: relative;
 }
 
-.galeri .container h2, .galeri div:nth-of-type(2) h2 {
+.galery .container h2, .galery div:nth-of-type(2) h2 {
     font-family: var(--sacramento);
     font-size: var(--fontSize-heading-base);
     font-weight: 400;
     padding: 2rem 1rem;
 }
 
-.galeri .container figure {
+.galery .container figure {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -32,12 +32,12 @@
     scrollbar-width: none;
 }
 
-.galeri .container figure::-webkit-scrollbar,
-.galeri div:nth-of-type(2)::-webkit-scrollbar {
+.galery .container figure::-webkit-scrollbar,
+.galery div:nth-of-type(2)::-webkit-scrollbar {
     display: none;
 }
 
-.galeri .container figure img {
+.galery .container figure img {
     width: 100%;
     height: 35rem;
     object-fit: cover;
@@ -45,7 +45,7 @@
     transition: var(--transition-small);
 }
 
-.galeri .container ul {
+.galery .container ul {
     padding: 0.5rem;
     display: flex;
     align-items: center;
@@ -57,7 +57,7 @@
     bottom: 5.6rem;
 }
 
-.galeri .container ul li {
+.galery .container ul li {
     width: 1.8rem;
     height: 0.25rem;
     background-color: rgba(255, 255, 255, 0.5);
@@ -66,12 +66,12 @@
     cursor: pointer;
 }
 
-.galeri .container ul li:hover, .galeri .container ul li.active {
+.galery .container ul li:hover, .galery .container ul li.active {
     background-color: #fff;
 }
 
-.galeri .container button:nth-of-type(1),
-.galeri .container button:nth-of-type(2) {
+.galery .container button:nth-of-type(1),
+.galery .container button:nth-of-type(2) {
     font-size: 4rem;
     color: rgba(255, 255, 255, 0.5);
     background: none;
@@ -80,21 +80,21 @@
     top: 24.6rem;
 }
 
-.galeri .container button:nth-of-type(1) i:hover,
-.galeri .container button:nth-of-type(2) i:hover {
+.galery .container button:nth-of-type(1) i:hover,
+.galery .container button:nth-of-type(2) i:hover {
     color: #fff;
     cursor: pointer;
 }
 
-.galeri .container button:nth-of-type(1) {
+.galery .container button:nth-of-type(1) {
     left: 2rem;
 }
 
-.galeri .container button:nth-of-type(2) {
+.galery .container button:nth-of-type(2) {
     right: 2rem;
 }
 
-.galeri .container button:nth-of-type(3) {
+.galery .container button:nth-of-type(3) {
     padding: 0.5rem 1rem;
     background-color: #fff;
     border: 1px solid #000;
@@ -103,13 +103,13 @@
     transition: var(--transition-small);
 }
 
-.galeri .container button:nth-of-type(3):hover {
+.galery .container button:nth-of-type(3):hover {
     color: #fff;
     background-color: #000;
     cursor: pointer;
 }
 
-.galeri div:nth-of-type(2) {
+.galery div:nth-of-type(2) {
     width: 100%;
     height: 100vh;
     padding: 2rem 8rem;
@@ -127,7 +127,7 @@
     transform-origin: bottom;
 }
 
-.galeri div:nth-of-type(2) > div {
+.galery div:nth-of-type(2) > div {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -1px 1px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     padding: 2rem;
@@ -137,13 +137,13 @@
     gap: 2rem;
 }
 
-.galeri div:nth-of-type(2) > div img {
+.galery div:nth-of-type(2) > div img {
     width: 100%;
     object-fit: cover;
     border-radius: 20px;
 }
 
-.galeri div:nth-of-type(2) button {
+.galery div:nth-of-type(2) button {
     padding:0;
     font-size: 2rem;
     background:none;
@@ -155,16 +155,16 @@
     transition: var(--transition-small);
 }
 
-.galeri div:nth-of-type(2) button:hover i {
+.galery div:nth-of-type(2) button:hover i {
     text-shadow: 1px 2px 5px rgba(0,0,0,0.5);
 }
 
-.galeri div:nth-of-type(2).active {
+.galery div:nth-of-type(2).active {
     transform: scale(1);
     opacity: 1;
 }
 
-.galeri > i {
+.galery > i {
     top:2rem;
     left: 10rem;
 }

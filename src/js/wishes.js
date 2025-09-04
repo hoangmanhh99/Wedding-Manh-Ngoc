@@ -9,13 +9,13 @@ import {
 import {data} from "../assets/data/data.js";
 import {commentsService} from "../services/commentsService.js";
 
-export const wishas = () => {
-    const wishasContainer = document.querySelector('.wishas');
-    const [_, form] = wishasContainer.children[2].children;
-    const [peopleComment, ___, containerComment] = wishasContainer.children[3].children;
+export const wishes = () => {
+    const wishesContainer = document.querySelector('.wishes');
+    const [_, form] = wishesContainer.children[2].children;
+    const [peopleComment, ___, containerComment] = wishesContainer.children[3].children;
     const buttonForm = form.children[6];
-    const pageNumber = wishasContainer.querySelector('.page-number');
-    const [prevButton, nextButton] = wishasContainer.querySelectorAll('.button-grup button');
+    const pageNumber = wishesContainer.querySelector('.page-number');
+    const [prevButton, nextButton] = wishesContainer.querySelectorAll('.button-grup button');
 
     const listItemBank = (data) => (
         `  <figure data-aos="zoom-in" data-aos-duration="1000">
@@ -26,8 +26,8 @@ export const wishas = () => {
     );
 
     const initialBank = () => {
-        const wishasBank = wishasContainer.children[1];
-        const [_, __, containerBank] = wishasBank.children;
+        const wishesBank = wishesContainer.children[1];
+        const [_, __, containerBank] = wishesBank.children;
 
         renderElement(data.bank, containerBank, listItemBank);
 
@@ -55,12 +55,12 @@ export const wishas = () => {
 
         if (newDate.days < 1) {
             if (newDate.hours < 1) {
-                date = `${newDate.minutes} menit yang lalu`;
+                date = `${newDate.minutes} phút trước`;
             } else {
-                date = `${newDate.hours} jam, ${newDate.minutes} menit yang lalu`;
+                date = `${newDate.hours} giờ, ${newDate.minutes} phút trước`;
             }
         } else {
-            date = `${newDate.days} hari, ${newDate.hours} jam yang lalu`;
+            date = `${newDate.days} ngày, ${newDate.hours} giờ trước`;
         }
 
         return ` <li data-aos="zoom-in" data-aos-duration="1000">
@@ -88,9 +88,9 @@ export const wishas = () => {
             comments.reverse();
 
             if (comments.length > 0) {
-                peopleComment.textContent = `${comments.length} Orang telah mengucapkan`;
+                peopleComment.textContent = `${comments.length} người đã gửi lời chúc`;
             } else {
-                peopleComment.textContent = `Belum ada yang mengucapkan`;
+                peopleComment.textContent = `Chưa có ai gửi lời chúc`;
             }
 
             pageNumber.textContent = '1';
@@ -107,7 +107,7 @@ export const wishas = () => {
         const comment = {
             id: generateRandomId(),
             name: e.target.name.value,
-            status: e.target.status.value === 'y' ? 'Hadir' : 'Tidak Hadir',
+            status: e.target.status.value === 'y' ? 'Có mặt' : 'Vắng mặt',
             message: e.target.message.value,
             date: getCurrentDateTime(),
             color: generateRandomColor(),
@@ -120,12 +120,12 @@ export const wishas = () => {
 
             lengthComment = response.comment.length;
 
-            peopleComment.textContent = `${++response.comment.length} Orang telah mengucapkan`;
+            peopleComment.textContent = `${++response.comment.length} người đã gửi lời chúc`;
             containerComment.insertAdjacentHTML('afterbegin', listItemComment(comment));
         } catch (error) {
             return `Error : ${error.message}`;
         } finally {
-            buttonForm.textContent = 'Kirim';
+            buttonForm.textContent = 'Gửi';
             form.reset();
         }
     });
@@ -137,18 +137,18 @@ export const wishas = () => {
     let endIndex = itemsPerPage;
 
     const updatePageContent = async () => {
-        containerComentar.innerHTML = '<h1 style="font-size: 1rem; margin: auto">Loading...</h1>';
+        containerComment.innerHTML = '<h1 style="font-size: 1rem; margin: auto">Loading...</h1>';
         pageNumber.textContent = '..';
         prevButton.disabled = true;
         nextButton.disabled = true;
 
         try {
-            const response = await commentsService.getComentar();
-            const {comentar} = response;
+            const response = await commentsService.getComments();
+            const {comments} = response;
 
-            comentar.reverse();
+            comments.reverse();
 
-            renderElement(comentar.slice(startIndex, endIndex), containerComentar, listItemComment);
+            renderElement(comments.slice(startIndex, endIndex), containerComment, listItemComment);
             pageNumber.textContent = currentPage.toString();
         } catch (error) {
             console.log(error);
@@ -159,7 +159,7 @@ export const wishas = () => {
     }
 
     nextButton.addEventListener('click', async () => {
-        if (endIndex <= lengthComentar) {
+        if (endIndex <= lengthComment) {
             currentPage++;
             startIndex = (currentPage - 1) * itemsPerPage;
             endIndex = startIndex + itemsPerPage;
@@ -176,6 +176,6 @@ export const wishas = () => {
         }
     });
 
-    initialComentar().then();
+    initialComment().then();
     initialBank();
 };

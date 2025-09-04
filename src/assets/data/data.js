@@ -49,7 +49,7 @@ export const data = {
         map: 'https://maps.app.goo.gl/XapfMUeNVvm2aYCm7',
     },
 
-    galeri: [
+    galery: [
         {
             id: 1,
             image: './src/assets/images/1.png'
@@ -100,27 +100,27 @@ export const data = {
         },
         {
             id: 2,
-            teks: 'Mempelai',
+            teks: 'Tiệc cưới',
             icon: 'bx bxs-group',
             path: '#bride',
         },
         {
             id: 3,
-            teks: 'Tanggal',
+            teks: 'Thời gian & Địa điểm',
             icon: 'bx bxs-calendar-check',
             path: '#time',
         },
         {
             id: 4,
-            teks: 'Galeri',
+            teks: 'Galery',
             icon: 'bx bxs-photo-album',
-            path: '#galeri',
+            path: '#galery',
         },
         {
             id: 5,
-            teks: 'Ucapan',
+            teks: 'Lời chúc',
             icon: 'bx bxs-message-rounded-dots',
-            path: '#wishas',
+            path: '#wishes',
         },
     ],
 }

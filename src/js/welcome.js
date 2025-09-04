@@ -1,5 +1,5 @@
-import {data} from "../assets/data/data.js";
-import {addClassElement, getQueryParameter, removeClassElement} from "../utils/helper.js";
+import { data } from "../assets/data/data.js";
+import { addClassElement, getQueryParameter, removeClassElement } from "../utils/helper.js";
 
 export const welcome = () => {
     let hasScrolled = false;
@@ -12,7 +12,7 @@ export const welcome = () => {
     const [iconButton] = audioButton.children;
 
     const generateFigureContent = (bride) => {
-        const {L: {name: brideLName}, P: {name: bridePName}, couple: coupleImage} = bride;
+        const { L: { name: brideLName }, P: { name: bridePName }, couple: coupleImage } = bride;
         return `
             <img src="${coupleImage}" alt="couple animation">
             <figcaption>
@@ -54,31 +54,9 @@ export const welcome = () => {
         });
     };
 
-    // openWeddingButton.addEventListener('click', () => {
-    //     addClassElement(document.body, 'active');
-    //     addClassElement(welcomeElement, 'hide');
-
-    //     setTimeout(() => {
-    //         addClassElement(homeElement, 'active');
-    //         addClassElement(navbarElement, 'active');
-    //         addClassElement(audioButton, 'show');
-    //         removeClassElement(iconButton, 'bx-play-circle');
-    //         addClassElement(iconButton, 'bx-pause-circle');
-    //         audioMusic.play();
-    //     }, 1500);
-
-    //     setTimeout(() => {
-    //         addClassElement(audioButton, 'active');
-    //     }, 3000);
-    // });
-    window.addEventListener('wheel', (event) => {
-        console.log("=== deltaY : ", window.deltaY );
-        
-    if (!hasScrolled && event.deltaY  > 0) { // Điều kiện scroll
-        hasScrolled = true;  // hoặc giá trị phù hợp với giao diện của bạn
+    openWeddingButton.addEventListener('click', () => {
         addClassElement(document.body, 'active');
         addClassElement(welcomeElement, 'hide');
-        
 
         setTimeout(() => {
             addClassElement(homeElement, 'active');
@@ -86,16 +64,38 @@ export const welcome = () => {
             addClassElement(audioButton, 'show');
             removeClassElement(iconButton, 'bx-play-circle');
             addClassElement(iconButton, 'bx-pause-circle');
-            
-
+            audioMusic.play();
         }, 1500);
-        audioMusic.play();
 
         setTimeout(() => {
             addClassElement(audioButton, 'active');
         }, 3000);
-    }
-});
+    });
+    // window.addEventListener('wheel', (event) => {
+    //     console.log("=== deltaY : ", window.deltaY);
+
+    //     if (!hasScrolled && event.deltaY > 0) { // Điều kiện scroll
+    //         hasScrolled = true;  // hoặc giá trị phù hợp với giao diện của bạn
+    //         addClassElement(document.body, 'active');
+    //         addClassElement(welcomeElement, 'hide');
+
+
+    //         setTimeout(() => {
+    //             addClassElement(homeElement, 'active');
+    //             addClassElement(navbarElement, 'active');
+    //             addClassElement(audioButton, 'show');
+    //             removeClassElement(iconButton, 'bx-play-circle');
+    //             addClassElement(iconButton, 'bx-pause-circle');
+
+
+    //         }, 1500);
+    //         audioMusic.play();
+
+    //         setTimeout(() => {
+    //             addClassElement(audioButton, 'active');
+    //         }, 3000);
+    //     }
+    // });
 
     const initializeWelcome = () => {
         figureElement.innerHTML = generateFigureContent(data.bride);

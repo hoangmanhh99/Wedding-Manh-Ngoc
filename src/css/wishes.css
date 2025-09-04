@@ -1,4 +1,4 @@
-.wishas {
+.wishes {
     width: 100%;
     min-height: 100vh;
     padding: 4rem 8rem;
@@ -7,13 +7,13 @@
     text-align: center;
 }
 
-.wishas div:nth-of-type(1) h2, .wishas div:nth-of-type(2) h2 {
+.wishes div:nth-of-type(1) h2, .wishes div:nth-of-type(2) h2 {
     font-size: var(--fontSize-heading-base);
     font-family: var(--sacramento);
     font-weight: 400;
 }
 
-.wishas div:nth-of-type(1) > div {
+.wishes div:nth-of-type(1) > div {
     margin-top: 1rem;
     width: 100%;
     display: flex;
@@ -22,7 +22,7 @@
     gap: 1rem;
 }
 
-.wishas div:nth-of-type(1) > div figure {
+.wishes div:nth-of-type(1) > div figure {
     width: 24rem;
     text-align: center;
     border-radius: 15px;
@@ -30,19 +30,19 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.wishas div:nth-of-type(1) > div figure img {
+.wishes div:nth-of-type(1) > div figure img {
     width: 10rem;
     height: 3rem;
     object-fit: contain;
     margin-bottom: 1rem;
 }
 
-.wishas div:nth-of-type(1) > div figure figcaption {
+.wishes div:nth-of-type(1) > div figure figcaption {
     line-height: 1.8rem;
     margin-bottom: 1rem;
 }
 
-.wishas div:nth-of-type(1) > div figure button {
+.wishes div:nth-of-type(1) > div figure button {
     padding: 0.4rem 1rem;
     border: 1px solid #000;
     background-color: #fff;
@@ -51,19 +51,19 @@
     transition: var(--transition-small);
 }
 
-.wishas div:nth-of-type(1) > div figure button:hover {
+.wishes div:nth-of-type(1) > div figure button:hover {
     background-color: #000;
     color: #fff;
 }
 
-.wishas div:nth-of-type(2){
+.wishes div:nth-of-type(2){
     margin-top: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -1px 1px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     padding: 2rem 4rem 4rem;
 }
 
-.wishas div:nth-of-type(2) > form {
+.wishes div:nth-of-type(2) > form {
     margin-top: 1rem;
     width: 100%;
     display: flex;
@@ -72,26 +72,26 @@
     flex-direction: column;
 }
 
-.wishas div:nth-of-type(2) > form label {
+.wishes div:nth-of-type(2) > form label {
     display: block;
     margin-top: 1.4rem;
     margin-bottom: 4px;
 }
 
-.wishas div:nth-of-type(2) > form input,
-.wishas div:nth-of-type(2) > form select,
-.wishas div:nth-of-type(2) > form textarea {
+.wishes div:nth-of-type(2) > form input,
+.wishes div:nth-of-type(2) > form select,
+.wishes div:nth-of-type(2) > form textarea {
     width: 100%;
     padding: 0.6rem 1rem;
     border-radius: 5px;
     border: 1px solid #000;
 }
 
-.wishas div:nth-of-type(2) > form textarea {
+.wishes div:nth-of-type(2) > form textarea {
     min-height: 6rem;
 }
 
-.wishas div:nth-of-type(2) > form button {
+.wishes div:nth-of-type(2) > form button {
     width: 100%;
     color: #fff;
     background-color: #000;
@@ -102,14 +102,14 @@
     cursor: pointer;
 }
 
-.wishas div:nth-of-type(3) {
+.wishes div:nth-of-type(3) {
     margin-top: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -1px 1px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     padding: 2rem 4rem;
 }
 
-.wishas div:nth-of-type(3) ul {
+.wishes div:nth-of-type(3) ul {
     margin-top: 1.4rem;
     width: 100%;
     display: flex;
@@ -122,14 +122,14 @@
     overflow-y: hidden;
 }
 
-.wishas div:nth-of-type(3) ul li {
+.wishes div:nth-of-type(3) ul li {
     display: flex;
     align-items: start;
     justify-content: start;
     gap: 1rem;
 }
 
-.wishas div:nth-of-type(3) ul li div:nth-of-type(1){
+.wishes div:nth-of-type(3) ul li div:nth-of-type(1){
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
@@ -140,31 +140,31 @@
     color: #fff;
 }
 
-.wishas div:nth-of-type(3) ul li div:nth-of-type(2){
+.wishes div:nth-of-type(3) ul li div:nth-of-type(2){
     margin: 0.4rem 0 0;
     padding: 0;
     text-align: start;
     box-shadow: none;
 }
 
-.wishas div:nth-of-type(3) ul li div:nth-of-type(2) h4 {
+.wishes div:nth-of-type(3) ul li div:nth-of-type(2) h4 {
     font-size: 1rem;
     font-weight: 400;
 }
 
-.wishas div:nth-of-type(3) ul li div:nth-of-type(2) p:nth-of-type(1){
+.wishes div:nth-of-type(3) ul li div:nth-of-type(2) p:nth-of-type(1){
     font-size: 0.6rem;
     font-weight: 300;
     line-height: 1rem;
 }
 
-.wishas div:nth-of-type(3) ul li div:nth-of-type(2) p:nth-of-type(2){
+.wishes div:nth-of-type(3) ul li div:nth-of-type(2) p:nth-of-type(2){
     margin-top: 0.4rem;
     font-weight: 300;
     font-size: 0.8rem;
 }
 
-.wishas div:nth-of-type(3) .button-grup {
+.wishes div:nth-of-type(3) .button-grup {
     margin: 1rem auto 0;
     border: 1px solid #000;
     border-radius: 4px;
@@ -175,7 +175,7 @@
     justify-content: center;
 }
 
-.wishas div:nth-of-type(3) .button-grup > span {
+.wishes div:nth-of-type(3) .button-grup > span {
     background-color: #d5d2d2;
     width: 2rem;
     height: 2rem;
@@ -184,7 +184,7 @@
     justify-content: center;
 }
 
-.wishas div:nth-of-type(3) .button-grup  button {
+.wishes div:nth-of-type(3) .button-grup  button {
     padding: 0.5rem 1rem;
     border: none;
     background:none;
@@ -195,7 +195,7 @@
     gap: 0.4rem;
 }
 
-.wishas svg:nth-of-type(1){
+.wishes svg:nth-of-type(1){
     position: absolute;
     z-index: -10;
     top: -12rem;
@@ -203,7 +203,7 @@
     right: 0;
 }
 
-.wishas svg:nth-of-type(2) {
+.wishes svg:nth-of-type(2) {
     position: absolute;
     z-index: -10;
     left: 0;
