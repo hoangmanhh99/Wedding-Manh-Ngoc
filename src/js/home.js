@@ -24,16 +24,16 @@ export const home = () => {
 
     const generateCountdownMarkup = (days, hours, minutes, seconds) => {
         return `<div>
-                    <p>${days}<br><span>Hari</span></p>
+                    <p>${days}<br><span>Ngày</span></p>
                 </div>
                 <div>
-                    <p>${hours}<br><span>Jam</span></p>
+                    <p>${hours}<br><span>Giờ</span></p>
                 </div>
                 <div>
-                    <p>${minutes}<br><span>Menit</span></p>
+                    <p>${minutes}<br><span>Phút</span></p>
                 </div>
                 <div>
-                    <p>${seconds}<br><span>Detik</span></p>
+                    <p>${seconds}<br><span>Giây</span></p>
                 </div>`;
     };
 
