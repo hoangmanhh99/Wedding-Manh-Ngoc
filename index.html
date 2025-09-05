@@ -244,9 +244,26 @@
 
     <section class="audio">
         <audio loop></audio>
-        <button type="button">
-            <i class="bx bx-play-circle" aria-hidden="true"></i>
-        </button>
+        <div class="playlist-controls">
+            <button type="button" class="prev-btn" aria-label="Previous song">
+                <i class="bx bx-skip-previous" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="play-pause-btn">
+                <i class="bx bx-play-circle" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="next-btn" aria-label="Next song">
+                <i class="bx bx-skip-next" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="song-info">
+            <div class="song-cover">
+                <img src="" alt="Song cover" class="cover-image">
+            </div>
+            <div class="song-details">
+                <div class="song-title">Wedding Song</div>
+                <div class="song-artist">Artist</div>
+            </div>
+        </div>
     </section>
 </main>
 

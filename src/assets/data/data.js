@@ -23,7 +23,7 @@ export const data = {
     time: {
         marriage: {
             year: '2025',
-            month: 'November',
+            month: 'Tháng 11',
             date: '29',
             day: 'Thứ 7',
             hours: {
@@ -31,16 +31,16 @@ export const data = {
                 finish: 'Hoàn thành'
             }
         },
-        reception: {
-            year: '2024',
-            month: 'November',
-            date: '14',
-            day: 'Kamis',
-            hours: {
-                start: '11.00',
-                finish: 'Hoàn thành'
-            }
-        },
+        // reception: {
+        //     year: '2025',
+        //     month: 'Tháng 12',
+        //     date: '13',
+        //     day: 'Thứ 7',
+        //     hours: {
+        //         start: '11.00',
+        //         finish: 'Hoàn thành'
+        //     }
+        // },
         address: 'Trung Tâm Tiệc Cưới 133, 105 Lý Sơn, Ngọc Thụy, Long Biên, Hà Nội'
     },
 
@@ -90,6 +90,52 @@ export const data = {
     ],
 
     audio: './src/assets/audio/wedding.mp3',
+    
+    // Playlist nhạc
+    playlist: [
+        {
+            id: 1,
+            title: 'I do',
+            artist: '911',
+            src: './src/assets/audio/I-do-911.m4a',
+            cover: './src/assets/images/couple.png'
+        },
+        {
+            id: 2,
+            title: 'A Thousand Years',
+            artist: 'Chiristin Perri', 
+            src: './src/assets/audio/A-thousand-years.m4a', // Bạn có thể thay đổi đường dẫn file nhạc khác
+            cover: './src/assets/images/7.jpg'
+        },
+        {
+            id: 3,
+            title: 'Dancing in the Dark',
+            artist: 'SOOBIN',
+            src: './src/assets/audio/Dancing-in-the-dark.m4a', // Bạn có thể thay đổi đường dẫn file nhạc khác
+            cover: './src/assets/images/4.jpg'
+        },
+        {
+            id: 4,
+            title: 'Một đời',
+            artist: 'Buitruonglinh',
+            src: './src/assets/audio/Mot-doi.m4a', // Bạn có thể thay đổi đường dẫn file nhạc khác
+            cover: './src/assets/images/4.jpg'
+        },
+        {
+            id: 5,
+            title: 'Người và ta',
+            artist: 'Rhymastic & Thanh Huyền',
+            src: './src/assets/audio/Nguoi-va-ta.m4a', // Bạn có thể thay đổi đường dẫn file nhạc khác
+            cover: './src/assets/images/4.jpg'
+        },
+        {
+            id: 6,
+            title: 'Yêu 5',
+            artist: 'Rhymastic',
+            src: './src/assets/audio/Yeu-5.m4a', // Bạn có thể thay đổi đường dẫn file nhạc khác
+            cover: './src/assets/images/4.jpg'
+        },
+    ],
 
     api: 'https://script.google.com/macros/s/AKfycbxkvUep5UAAoNbQtP7tsv8W4Sb6lNBGC38U8CYMDi2FRAJfwY6jXlNKCgKN_RGKgXpVDQ/exec',
 

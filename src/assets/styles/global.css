@@ -45,32 +45,7 @@ p {
     line-height: 1.7rem;
 }
 
-.audio button {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    border: none;
-    background-color: #fff;
-    color: #000;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    cursor: pointer;
-    transform: translateX(200%);
-    transition: 1.5s transform ease;
-}
-
-.audio button.show {
-    transform: translateX(0);
-}
-
-.audio button.active {
-    animation: rotate 3s linear infinite;
-}
+/* Legacy audio button styles - now handled by playlist controls */
 
 
 @keyframes rotate {
@@ -90,4 +65,110 @@ p {
     50% {
         transform: translateY(0.8rem);
     }
+}
+
+/* Playlist Controls Styles */
+.audio {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1000;
+}
+
+.playlist-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    transform: translateX(200%);
+    transition: 1.5s transform ease;
+}
+
+.playlist-controls.show {
+    transform: translateX(0);
+}
+
+.playlist-controls button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.playlist-controls button:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.1);
+}
+
+.play-pause-btn {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    font-size: 1.3rem !important;
+}
+
+.play-pause-btn.active {
+    animation: rotate 3s linear infinite;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: translateX(200%);
+    transition: 1.5s transform ease;
+    max-width: 200px;
+}
+
+.song-info.show {
+    transform: translateX(0);
+}
+
+.song-cover {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.song-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.song-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.1rem;
+}
+
+.song-artist {
+    font-size: 0.7rem;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
