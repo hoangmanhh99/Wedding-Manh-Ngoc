@@ -12,25 +12,59 @@
     font-weight: 400;
 }
 
-.time div:nth-of-type(1) {
-    margin-top: 2rem;
+.time-card {
+    max-width: 360px;
+    margin: 1.5rem auto 0;
+    background: #fff3f5;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 1rem 1rem 1.25rem;
 }
 
-.time div:nth-of-type(1) div h3 {
-    font-family: var(--sacramento);
-    font-size: var(--fontSize-heading-lg);
-    font-weight: 400;
+.time-header {
+    margin-bottom: 0.75rem;
+}
+.couple-names {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.time-subtitle {
+    font-size: 0.8rem;
+    opacity: 0.85;
 }
 
-.time div:nth-of-type(1) div:nth-of-type(2){
-    margin-top: 2rem;
+.timeline {
+    list-style: none;
+    padding: 0.5rem 0 0.25rem;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.5rem;
+}
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+.timeline-icon {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+.timeline-time {
+    font-weight: 700;
+}
+.timeline-label {
+    font-size: 0.85rem;
 }
 
-.time a {
+.time .map-link {
     padding: 0.5rem 1rem;
-    color: #fff;
+    color: var(--on-primary-color);
     font-size: 1rem;
-    background-color: #000;
+    background-color: var(--primary-color);
     margin: 2rem auto 1rem;
     border-radius: 20px;
     width: fit-content;
@@ -40,7 +74,7 @@
     gap: 0.5rem;
 }
 
-.time a i {
+.time .map-link i {
     font-size: 1.2rem;
 }
 

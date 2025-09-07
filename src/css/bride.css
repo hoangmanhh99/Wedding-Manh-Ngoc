@@ -19,44 +19,77 @@
     margin: 1rem 0;
 }
 
-.bride .bride_couple,
-.bride .bride_couple ul,
-.bride .bride_couple li,
-.bride .bride_couple li figure {
-    width: 100%;
+/* Invite card layout */
+.invite-card {
+    max-width: 680px;
+    margin: 0 auto;
+    background: #fffaf8;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 1.5rem 1.25rem 2rem;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.invite-header {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.invite-guest {
+    font-family: var(--sacramento);
+    font-size: 1rem;
+    margin: 0.3rem 0 0.6rem;
+}
+
+.invite-body .invite-text {
+    margin: 0.5rem 0 1rem;
+}
+
+.invite-time {
+    margin: 0.5rem 0 1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.invite-time-row {
     display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.invite-venue {
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem;
+}
+
+.invite-map {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    background: var(--primary-color);
+    color: var(--on-primary-color);
+    font-size: 0.9rem;
 }
 
-.bride .bride_couple {
-    margin-top: 4rem;
+.invite-note {
+    margin: 1rem 0 0.8rem;
 }
 
-.bride .bride_couple ul {
+.families {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
-
-.bride .bride_couple li figure img {
-    width: 12rem;
-    height: 12rem;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: var(--shadow-md);
+.family-title {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: 700;
 }
-
-.bride .bride_couple li figure figcaption {
-    font-size: var(--fontSize-heading-base);
-    margin: 1rem 0;
-    font-family: var(--sacramento);
-}
-
-.bride .bride_couple span {
-    font-size: 3.4rem;
-    font-family: var(--sacramento);
-    font-weight: 400;
-    margin-top: 1rem;
+.family-names {
+    font-size: 0.9rem;
 }
 
 .bride i, .hadist i, .time a + p + i, .galery > i {

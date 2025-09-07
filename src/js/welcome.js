@@ -161,7 +161,8 @@ export const welcome = () => {
 
         setTimeout(() => {
             addClassElement(homeElement, 'active');
-            addClassElement(navbarElement, 'active');
+            // Keep navbar visible but do not force sidebar open on mobile
+            removeClassElement(navbarElement, 'active');
             addClassElement(playlistControls, 'show');
             addClassElement(songInfo, 'show');
             removeClassElement(iconButton, 'bx-play-circle');
@@ -183,7 +184,8 @@ export const welcome = () => {
 
             setTimeout(() => {
                 addClassElement(homeElement, 'active');
-                addClassElement(navbarElement, 'active');
+                // Do not auto open sidebar
+                removeClassElement(navbarElement, 'active');
                 addClassElement(playlistControls, 'show');
                 addClassElement(songInfo, 'show');
                 removeClassElement(iconButton, 'bx-play-circle');
@@ -217,7 +219,8 @@ export const welcome = () => {
 
                 setTimeout(() => {
                     addClassElement(homeElement, 'active');
-                    addClassElement(navbarElement, 'active');
+                    // Do not auto open sidebar
+                    removeClassElement(navbarElement, 'active');
                     addClassElement(playlistControls, 'show');
                     addClassElement(songInfo, 'show');
                     removeClassElement(iconButton, 'bx-play-circle');

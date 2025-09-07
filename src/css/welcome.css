@@ -6,14 +6,14 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    background-color: #212529;
+    background-color: var(--primary-color);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 99;
-    color: #fff;
+    color: var(--on-primary-color);
     transition: all 2s ease-in;
     opacity: 0;
     transform: translateY(-100%);
@@ -49,7 +49,7 @@
     border-radius: 50%;
     object-fit: cover;
     box-shadow: var(--shadow-md);
-    border: 2px solid #fff;
+    border: 2px solid var(--on-primary-color);
 }
 
 .welcome figure figcaption {
@@ -63,6 +63,7 @@
     font-size: 2rem;
     margin: 1rem 0;
     display: block;
+    padding-bottom: 1rem;
 }
 
 .welcome button {
@@ -70,7 +71,7 @@
     align-items: inherit;
     justify-content: inherit;
     gap: 0.4rem;
-    color: #000;
+    color: var(--text-color);
     padding: 0.5rem 1rem;
     border: none;
     transition: var(--transition-small);
@@ -80,8 +81,8 @@
 }
 
 .welcome button:hover {
-    color: #fff;
-    background-color: #000;
+    color: var(--on-primary-color);
+    background-color: var(--primary-color);
     animation: none;
 }
 

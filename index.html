@@ -61,15 +61,19 @@
 <body>
 
 <header>
+    <button type="button" class="menu-toggle" aria-label="Mở menu">
+        <i class='bx bx-menu'></i>
+    </button>
     <nav role="navigation" aria-label="main bavigation"></nav>
+    <div class="backdrop"></div>
 </header>
 
 <main role="main">
     <section class="welcome" aria-labelledby="welcome-title">
-        <h2 id="welcome-title">The Wedding Of</h2>
+        <h2 id="welcome-title">Happy Wedding</h2>
         <figure></figure>
         <p></p>
-        <button type="button" aria-label="Buka Undangan">
+        <button type="button" aria-label="Mở thiệp mời">
             <i class="bx bxs-envelope-open"></i>
             <span>Thiệp mời</span>
         </button>
@@ -81,13 +85,20 @@
 
     <section class="home" id="home" aria-labelledby="home-title">
         <h2 id="home-title">Lời mời đám cưới</h2>
-        <figure></figure>
+        <div class="name-images-container">
+            <img src="./src/assets/images/minhngoc.png" alt="Tên cô dâu" class="name-image bride-name">
+            <img src="./src/assets/images/vanmanh.png" alt="Tên chú rể" class="name-image groom-name">
+        </div>
+        <!-- <figure></figure> -->
+        
         <h3></h3>
+        
         <div class="home-time"></div>
         <a href="" target="_blank" role="link" aria-label="Save calendar">
             <i class='bx bx-calendar-check' aria-hidden="true"></i>
             <span>Lưu vào lịch của bạn</span>
         </a>
+        
         <div class="scroll_down">
             <i class="bx bx-mouse bx-fade-down" aria-hidden="true"></i>
             <span>scroll down</span>
@@ -100,20 +111,20 @@
     </section>
 
     <section class="bride" id="bride" aria-labelledby="bride-title">
-        <h2 id="bride-title" data-aos="zoom-in" data-aos-duration="1000">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
-        <h3 data-aos="zoom-in" data-aos-duration="1000">Assalamualaikum Warahmatullahi Wabarakatuh</h3>
-        <p data-aos="zoom-in" data-aos-duration="1000">
-            Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta kerabat sekalian untuk menghadiri
-            acara pernikahan kami:
-        </p>
-        <div class="bride_couple">
-            <ul role="list" aria-label="List Pasangan Pengantin"></ul>
+        <div class="invite-card" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="invite-header">
+                <div class="invite-title">TRÂN TRỌNG KÍNH MỜI</div>
+                <div class="invite-guest">Bạn và người thương</div>
+            </div>
+            <div class="invite-body">
+                <p class="invite-text">Tới tham dự buổi tiệc cưới cùng gia đình chúng tôi vào lúc</p>
+                <div class="invite-time"></div>
+                <div class="invite-venue"></div>
+                <a class="invite-map" href="#" target="_blank" rel="noopener">Xem địa chỉ</a>
+                <p class="invite-note">Sự hiện diện của quý khách là niềm vinh hạnh cho gia đình chúng tôi!</p>
+                <div class="invite-families"></div>
+            </div>
         </div>
-        <i class="bx bx-heart" aria-hidden="true"></i>
-        <i class="bx bx-heart" aria-hidden="true"></i>
-        <i class="bx bx-heart" aria-hidden="true"></i>
-        <i class="bx bx-heart" aria-hidden="true"></i>
-        <i class="bx bx-heart" aria-hidden="true"></i>
     </section>
 
     <!-- <section class="hadist" aria-labelledby="hadist-title">
@@ -137,40 +148,38 @@
     </section> -->
 
     <section class="time" id="time" aria-labelledby="time-title">
-        <h2 id="time-title" data-aos="zoom-in" data-aos-duration="1000">Thời gian & Địa điểm</h2>
-        <p data-aos="zoom-in" data-aos-duration="1000">
-            Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, insyaAllah kami akan menyelenggarakan acara :
-        </p>
-        <div>
-            <div data-aos="zoom-in" data-aos-duration="1000"></div>
-            <div data-aos="zoom-in" data-aos-duration="1000"></div>
+        <h2 id="time-title" data-aos="zoom-in" data-aos-duration="1000">Chương trình tiệc cưới</h2>
+        <div class="time-card" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="time-header">
+                <div class="couple-names"></div>
+                <div class="time-subtitle"></div>
+            </div>
+            <ul class="timeline" role="list" aria-label="Timeline chương trình"></ul>
+            <a href="" class="map-link" role="link" target="_blank" aria-label="Xem bản đồ">
+                <span class="map-pin">📍</span>
+                <span>Nhấn vào đây để xem địa chỉ</span>
+            </a>
         </div>
-        <a href="" role="link" target="_blank" aria-label="Lihat google maps" data-aos="zoom-in"
-           data-aos-duration="1000">
-            <i class="bx bxs-map-alt" aria-hidden="true"></i>
-            <span>Xem Google maps</span>
-        </a>
-        <p data-aos="zoom-in" data-aos-duration="1000"></p>
         <i class="bx bx-heart" aria-hidden="true"></i>
     </section>
 
     <section class="galery" id="galery" aria-labelledby="galery-title">
         <div class="container" data-aos="zoom-in" data-aos-duration="1000">
-            <h2 id="galery-title">Galery</h2>
-            <figure aria-label="galery box"></figure>
-            <ul aria-label="pagination galery"></ul>
-            <button type="button" aria-label="button prev galery" data-id="">
+            <h2 id="galery-title">Thư viện ảnh</h2>
+            <figure aria-label="hộp ảnh"></figure>
+            <ul aria-label="phân trang ảnh"></ul>
+            <button type="button" aria-label="nút ảnh trước" data-id="">
                 <i class="bx bx-chevron-left"></i>
             </button>
-            <button type="button" aria-label="button next galery" data-id="">
+            <button type="button" aria-label="nút ảnh sau" data-id="">
                 <i class="bx bx-chevron-right"></i>
             </button>
-            <button type="button" aria-label="show all images">Xem tất cả ảnh</button>
+            <button type="button" aria-label="xem tất cả ảnh">Xem tất cả ảnh</button>
         </div>
         <div>
-            <h2>Galery</h2>
+            <h2>Thư viện ảnh</h2>
             <div></div>
-            <button type="button" aria-label="close button">
+            <button type="button" aria-label="nút đóng">
                 <i class='bx bx-x' aria-hidden="true"></i>
             </button>
         </div>
@@ -183,14 +192,14 @@
                   d="M0,0L48,32C96,64,192,128,288,138.7C384,149,480,107,576,106.7C672,107,768,149,864,144C960,139,1056,85,1152,69.3C1248,53,1344,75,1392,85.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
         </svg>
         <div>
-            <h2 data-aos="zoom-in" data-aos-duration="1000">Love Gift</h2>
+            <!-- <h2 data-aos="zoom-in" data-aos-duration="1000">Love Gift</h2> -->
             <!-- <p data-aos="zoom-in" data-aos-duration="1000">
                 Gửi quà tới cô dâu và chú rể
             </p> -->
-            <button class="gift-button" data-aos="zoom-in" data-aos-duration="1000">
+            <!-- <button class="gift-button" data-aos="zoom-in" data-aos-duration="1000">
                 <i class="bx bx-gift gift-icon"></i>
                 <span>Gửi quà đến cô dâu và chú rể</span>
-            </button>
+            </button> -->
             <div></div>
         </div>
 
@@ -221,16 +230,16 @@
             <p style="margin-bottom: 0.5rem"></p>
             <hr>
 
-            <ul aria-label="list comments"></ul>
+            <ul aria-label="danh sách bình luận"></ul>
             <hr style="margin-top: 1rem">
             <div class="button-grup">
                 <button>
                     <i class="bx bxs-left-arrow-circle"></i>
-                    <span>prev</span>
+                    <span>trước</span>
                 </button>
                 <span class="page-number"></span>
                 <button>
-                    <span>next</span>
+                    <span>sau</span>
                     <i class="bx bxs-right-arrow-circle"></i>
                 </button>
             </div>
@@ -245,23 +254,23 @@
     <section class="audio">
         <audio loop></audio>
         <div class="playlist-controls">
-            <button type="button" class="prev-btn" aria-label="Previous song">
+            <button type="button" class="prev-btn" aria-label="Bài trước">
                 <i class="bx bx-skip-previous" aria-hidden="true"></i>
             </button>
             <button type="button" class="play-pause-btn">
                 <i class="bx bx-play-circle" aria-hidden="true"></i>
             </button>
-            <button type="button" class="next-btn" aria-label="Next song">
+            <button type="button" class="next-btn" aria-label="Bài sau">
                 <i class="bx bx-skip-next" aria-hidden="true"></i>
             </button>
         </div>
         <div class="song-info">
             <div class="song-cover">
-                <img src="" alt="Song cover" class="cover-image">
+                <img src="" alt="Ảnh bìa bài hát" class="cover-image">
             </div>
             <div class="song-details">
-                <div class="song-title">Wedding Song</div>
-                <div class="song-artist">Artist</div>
+                <div class="song-title">Bài hát cưới</div>
+                <div class="song-artist">Ca sĩ</div>
             </div>
         </div>
     </section>
@@ -272,7 +281,7 @@
     <h2>Trân trọng</h2>
     <!-- <h4> اَلْحَمْدُ للَّهِ رَبِّ الْعالَمِينَ</h4> -->
     <div>
-        <p>Build with <span>Hoàng Văn Mạnh</span></p>
+        <p>Được tạo bởi <span>Hoàng Văn Mạnh</span></p>
         <a href="https://github.com/hoangmanhh99">
             <i class="bx bxl-github"></i>
             <span>hoangmanhh99</span>

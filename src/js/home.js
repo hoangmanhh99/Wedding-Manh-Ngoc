@@ -6,12 +6,9 @@ export const home = () => {
     const [_, figureElement, timeElement, homeTime, calendarAnchor] = homeContainer.children;
 
     const generateFigureContent = ({bride}) => {
-        const {L: {name: brideLName}, P: {name: bridePName}, couple: coupleImage} = bride;
+        const {couple: coupleImage} = bride;
         return `
-            <img src="${coupleImage}" alt="couple animation">
-            <figcaption>
-                ${bridePName.split(' ')[2]} ${bridePName.split(' ')[3]} & ${brideLName.split(' ')[1]} ${brideLName.split(' ')[2]}
-            </figcaption>`;
+            <img src="${coupleImage}" alt="couple animation">`;
     };
 
     const generateTimeContent = ({time}) => {
@@ -64,7 +61,7 @@ export const home = () => {
 
     const initializeHome = () => {
         const {bride, time, link} = data;
-        figureElement.innerHTML = generateFigureContent({bride});
+        // figureElement.innerHTML = generateFigureContent({bride});
         timeElement.innerHTML = generateTimeContent({time});
         calendarAnchor.href = link.calendar;
         startCountdown(homeTime, time);

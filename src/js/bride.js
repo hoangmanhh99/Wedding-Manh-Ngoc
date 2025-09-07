@@ -1,20 +1,53 @@
 import {data} from "../assets/data/data.js";
-import {renderElement} from "../utils/helper.js";
+
+// Function to get URL parameter
+const getQueryParameter = (name) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+};
 
 export const bride = () => {
-    const brideCouple = document.querySelector('.bride_couple ul');
-    const brideListItem = (data) => (
-        `<li data-aos="zoom-in" data-aos-duration="1000">
-              <figure>
-                   <img src=${data.image} alt="${data.name} animation">
-                   <figcaption>${data.name}</figcaption>
-              </figure>
-              <p>${data.child} <br>dari <br> Bapak ${data.father} & Ibu ${data.mother}</p>
-              <span style="display: ${data.id === 2 ? 'none' : 'block'}">&</span>
-        </li>`
-    )
+    const section = document.querySelector('.bride');
+    const card = section.querySelector('.invite-card');
+    const guestElement = card.querySelector('.invite-guest');
+    const timeBox = card.querySelector('.invite-time');
+    const venueBox = card.querySelector('.invite-venue');
+    const mapLink = card.querySelector('.invite-map');
+    const families = card.querySelector('.invite-families');
 
-    const brideData = [data.bride.L, data.bride.P];
+    const {time, link, bride: brideData} = data;
 
-    renderElement(brideData, brideCouple, brideListItem);
+    // Get guest name from URL parameter
+    const guestName = getQueryParameter('to');
+    if (guestName) {
+        guestElement.textContent = guestName;
+    }
+
+    // Time
+    const {year, month, date, day, hours} = time.marriage;
+    timeBox.innerHTML = `
+        <div class="invite-time-row">
+            <div class="time-day">${day}</div>
+            <div class="time-hour">${hours.start}</div>
+            <div class="time-date">${date} ${month} ${year}</div>
+        </div>`;
+
+    // Venue
+    venueBox.textContent = data.time.address;
+    mapLink.href = link.map;
+
+    // Families
+    const groom = brideData.L;
+    const bride = brideData.P;
+    families.innerHTML = `
+        <div class="families">
+            <div class="family">
+                <div class="family-title">Nhà gái</div>
+                <div class="family-names">${bride.father.toUpperCase()} <br> ${bride.mother.toUpperCase()}</div>
+            </div>
+            <div class="family">
+                <div class="family-title">Nhà trai</div>
+                <div class="family-names">${groom.father.toUpperCase()} <br> ${groom.mother.toUpperCase()}</div>
+            </div>
+        </div>`;
 }

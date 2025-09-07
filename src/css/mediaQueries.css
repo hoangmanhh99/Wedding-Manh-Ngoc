@@ -7,6 +7,44 @@
         bottom: -5rem;
     }
 
+    /* Signature images: mobile */
+    .name-images-container {
+        padding: 0 1rem;
+        gap: 0.4rem;
+    }
+    .name-image {
+        width: clamp(180px, 70vw, 300px);
+    }
+    .bride-name {
+        margin-left: 0;
+        align-self: center;
+        transform: rotate(-2deg);
+    }
+    .groom-name {
+        margin-right: 0;
+        align-self: center;
+        transform: rotate(2deg);
+    }
+
+    .name-images-container {
+        margin: 1rem 0;
+        gap: 0.5rem;
+    }
+
+    .name-image {
+        max-width: 300px;
+    }
+
+    .bride-name {
+        margin-right: 3rem;
+        /* transform: rotate(-3deg); */
+    }
+
+    .groom-name {
+        margin-left: 3rem;
+        /* transform: rotate(3deg); */
+    }
+
     .bride, .time{
         padding: 6rem 1.4rem 8rem;
     }
@@ -188,4 +226,27 @@
     footer > div a {
         font-size: 0.6rem;
     }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+    /* Tablet layout */
+    .name-image {
+        width: clamp(220px, 36vw, 340px);
+    }
+    .bride-name {
+        margin-left: 3vw;
+        transform: rotate(-3deg);
+    }
+    .groom-name {
+        margin-right: 3vw;
+        transform: rotate(3deg);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /* Desktop large */
+    .name-image {
+        width: clamp(280px, 32vw, 420px);
+    }
+    .groom-name { margin-top: 1rem; }
 }

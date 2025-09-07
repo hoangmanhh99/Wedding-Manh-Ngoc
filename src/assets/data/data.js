@@ -3,17 +3,17 @@ export const data = {
         L: {
             id: 1,
             name: 'Hoàng Văn Mạnh',
-            child: 'Putra ke lorem',
-            father: 'Lorem',
-            mother: 'Ipsum',
+            child: 'Trưởng nam',
+            father: 'Hoàng Văn Nhàn',
+            mother: 'Trịnh Thị Hằng',
             image: './src/assets/images/10.jpg'
         },
         P: {
             id: 2,
             name: 'Phạm Nguyễn Minh Ngọc',
-            child: 'Putri ke lorem',
-            father: 'Lorem',
-            mother: 'Ipsum',
+            child: 'Trưởng nữ',
+            father: 'Phạm Văn Nho',
+            mother: 'Nguyễn Thị Đông Mai',
             image: './src/assets/images/4.jpg'
         },
 

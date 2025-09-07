@@ -67,7 +67,7 @@
 }
 
 .galery .container ul li:hover, .galery .container ul li.active {
-    background-color: #fff;
+    background-color: var(--on-primary-color);
 }
 
 .galery .container button:nth-of-type(1),
@@ -96,16 +96,16 @@
 
 .galery .container button:nth-of-type(3) {
     padding: 0.5rem 1rem;
-    background-color: #fff;
-    border: 1px solid #000;
+    background-color: var(--on-primary-color);
+    border: 1px solid var(--text-color);
     border-radius: 20px;
     margin-top: 1rem;
     transition: var(--transition-small);
 }
 
 .galery .container button:nth-of-type(3):hover {
-    color: #fff;
-    background-color: #000;
+    color: var(--on-primary-color);
+    background-color: var(--primary-color);
     cursor: pointer;
 }
 
@@ -118,7 +118,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #fff;
+    background-color: var(--bg-color);
     z-index: 99;
     overflow-y: auto;
     transition: all .3s ease;
