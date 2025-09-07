@@ -24,12 +24,12 @@ export const bride = () => {
     }
 
     // Time
-    const {year, month, date, day, hours} = time.marriage;
+    const {year, month, date, day, hours, lunar} = time.marriage;
     timeBox.innerHTML = `
         <div class="invite-time-row">
-            <div class="time-day">${day}</div>
-            <div class="time-hour">${hours.start}</div>
-            <div class="time-date">${date} ${month} ${year}</div>
+            <div class="time-day">${hours.start} / ${day.toUpperCase()} / ${date} ${month.toUpperCase()} ${year}</div>
+            <div class="time-hour">${lunar}</div>
+
         </div>`;
 
     // Venue

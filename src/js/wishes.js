@@ -67,8 +67,8 @@ export const wishes = () => {
                      <div style="background-color: ${data.color}">${data.name.charAt(0).toUpperCase()}</div>
                      <div>
                          <h4>${name}</h4>
-                         <p>${date} <br>${data.status}</p>
-                         <p>${data.message}</p>
+                         <p>${date}</p>
+                         <h5>${data.message}</h5>
                      </div>
                  </li>`;
     };

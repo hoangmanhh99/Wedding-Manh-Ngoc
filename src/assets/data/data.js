@@ -25,11 +25,12 @@ export const data = {
             year: '2025',
             month: 'Tháng 11',
             date: '29',
-            day: 'Thứ 7',
+            day: 'Thứ Bảy',
             hours: {
-                start: '17.00',
+                start: '17:00',
                 finish: 'Hoàn thành'
-            }
+            },
+            lunar: 'TỨC NGÀY 10 THÁNG 10 NĂM ẤT TỴ'
         },
         // reception: {
         //     year: '2025',
@@ -154,7 +155,7 @@ export const data = {
         },
         {
             id: 3,
-            teks: 'Thời gian & Địa điểm',
+            teks: 'Chương trình',
             icon: 'bx bxs-calendar-check',
             path: '#time',
         },

@@ -26,10 +26,11 @@
 }
 .couple-names {
     font-weight: 700;
+    font-size: 1.3rem;
     color: var(--primary-color);
 }
 .time-subtitle {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     opacity: 0.85;
 }
 
@@ -72,6 +73,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    font-weight: 800;
 }
 
 .time .map-link i {
