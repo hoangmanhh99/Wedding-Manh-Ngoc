@@ -16,10 +16,10 @@ export const time = () => {
 
     // Program items
     const program = [
-        { time: '16:00', label: 'ĐÓN KHÁCH', icon: './src/assets/images/Icon-01.png' },
-        { time: '16:30', label: 'CHỤP ẢNH', icon: './src/assets/images/Icon-02.png' },
-        { time: '17:00', label: 'HÔN LỄ', icon: './src/assets/images/Icon-03.png' },
-        { time: '17:30', label: 'KHAI TIỆC', icon: './src/assets/images/Icon-04.png' },
+        { time: '16:00', label: 'ĐÓN KHÁCH', icon: './src/assets/images/time1.svg' },
+        { time: '16:30', label: 'CHỤP ẢNH', icon: './src/assets/images/time2.svg' },
+        { time: '17:00', label: 'HÔN LỄ', icon: './src/assets/images/time3.svg' },
+        { time: '17:30', label: 'KHAI TIỆC', icon: './src/assets/images/time4.svg' },
     ];
 
     timeline.innerHTML = program.map(item => `
