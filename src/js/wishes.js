@@ -12,7 +12,7 @@ import {commentsService} from "../services/commentsService.js";
 export const wishes = () => {
     const wishesContainer = document.querySelector('.wishes');
     const [_, form] = wishesContainer.children[2].children;
-    const [peopleComment, ___, containerComment] = wishesContainer.children[3].children;
+    // const [peopleComment, ___, containerComment] = wishesContainer.children[3].children;
     const buttonForm = form.children[6];
     const pageNumber = wishesContainer.querySelector('.page-number');
     const [prevButton, nextButton] = wishesContainer.querySelectorAll('.button-grup button');
@@ -158,23 +158,23 @@ export const wishes = () => {
         }
     }
 
-    nextButton.addEventListener('click', async () => {
-        if (endIndex <= lengthComment) {
-            currentPage++;
-            startIndex = (currentPage - 1) * itemsPerPage;
-            endIndex = startIndex + itemsPerPage;
-            await updatePageContent();
-        }
-    });
+    // nextButton.addEventListener('click', async () => {
+    //     if (endIndex <= lengthComment) {
+    //         currentPage++;
+    //         startIndex = (currentPage - 1) * itemsPerPage;
+    //         endIndex = startIndex + itemsPerPage;
+    //         await updatePageContent();
+    //     }
+    // });
 
-    prevButton.addEventListener('click', async () => {
-        if (currentPage > 1) {
-            currentPage--;
-            startIndex = (currentPage - 1) * itemsPerPage;
-            endIndex = startIndex + itemsPerPage;
-            await updatePageContent();
-        }
-    });
+    // prevButton.addEventListener('click', async () => {
+    //     if (currentPage > 1) {
+    //         currentPage--;
+    //         startIndex = (currentPage - 1) * itemsPerPage;
+    //         endIndex = startIndex + itemsPerPage;
+    //         await updatePageContent();
+    //     }
+    // });
 
     // initialComment().then();
     // initialBank();

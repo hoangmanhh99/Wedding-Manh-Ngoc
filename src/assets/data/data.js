@@ -99,7 +99,7 @@ export const data = {
             title: 'I do',
             artist: '911',
             src: './src/assets/audio/I-do-911.m4a',
-            cover: './src/assets/images/couple.png'
+            cover: './src/assets/images/couple.jpg'
         },
         {
             id: 2,

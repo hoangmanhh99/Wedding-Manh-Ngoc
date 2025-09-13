@@ -17,7 +17,7 @@ playlist: [
         title: 'Wedding Song',
         artist: 'Artist 1',
         src: './src/assets/audio/wedding.mp3',
-        cover: './src/assets/images/couple.png'
+        cover: './src/assets/images/couple.jpg'
     },
     {
         id: 2,
